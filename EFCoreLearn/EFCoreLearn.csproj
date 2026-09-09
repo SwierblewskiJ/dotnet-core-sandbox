@@ -11,6 +11,15 @@
     <PackageReference
       Include="Microsoft.EntityFrameworkCore.Sqlite"
       Version="10.0.12"/>
+
+    <PackageReference Version="10.0.12 "
+      Include="Microsoft.EntityFrameworkCore.Design">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    
+    <ProjectReference 
+      Include="../Northwind.Models/Northwind.Models.csproj"/>
   </ItemGroup>
 
 </Project>
