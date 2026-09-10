@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Models;
+namespace Northwind.Models;
 
 public class Category
 {

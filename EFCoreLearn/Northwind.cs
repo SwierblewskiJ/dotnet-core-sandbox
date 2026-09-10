@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Models;
+using Northwind.Models;
 
 namespace EFCoreLearn.Data;
 
