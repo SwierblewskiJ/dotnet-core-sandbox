@@ -1,5 +1,17 @@
 ﻿using EFCoreLearn.Data;
 
-using Northwind db = new();
+// using var db = new EFCoreLearn.Data.Northwind();
 
-Console.WriteLine($"Supplier: {db.Database.ProviderName}");
+// Console.WriteLine($"Supplier: {db.Database.ProviderName}");
+
+// ConfigureConsole();
+// QueryCategories();
+// CategoryQueryFilter();
+
+// ProductQuery()
+
+// GetOneProduct();
+
+// QueryWithLike();
+
+QueryRandomProduct();
