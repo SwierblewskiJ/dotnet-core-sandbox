@@ -8,12 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="../EFCoreLearn/Program.Utils.cs" Link="Program.Utils.cs" />
 
     <Using Include="System.Console" Static="true" /> 
 
     <PackageReference
       Include="Microsoft.EntityFrameworkCore.Sqlite"
       Version="10.0.12"/>
-  <ItemGroup/>
+  </ItemGroup>
 
 </Project>

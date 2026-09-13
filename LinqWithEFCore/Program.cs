@@ -1,1 +1,11 @@
-﻿Console.WriteLine("Hello, World!");
+﻿ConfigureConsole();
+
+// FilterAndSort();
+
+// JoinCategoriesAndProducts();
+
+// GroupAndJoinCategoriesProducts();
+
+// ProductsSearch();
+
+ProductsPaging();
