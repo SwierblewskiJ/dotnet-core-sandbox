@@ -17,7 +17,7 @@ public class Northwind : DbContext
 
         string text = $"Data Source={dbPath}";
         Console.WriteLine(text);
-        optionsBuilder.UseSqlite(text);
+        optionsBuilder.UseSqlite(connectionString: text);
     }
 
     protected override void OnModelCreating(
