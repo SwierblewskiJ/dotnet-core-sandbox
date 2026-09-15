@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 public static class NorthwindContextExtensions
 {
-    public static IServiceCollection AddNorthwind(
+    public static IServiceCollection AddNorthwindContext(
         this IServiceCollection services,
         string path="..", string database = "Northwind.db"
     )
