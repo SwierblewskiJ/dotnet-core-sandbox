@@ -1,0 +1,23 @@
+@page
+@functions
+{
+    public string? DayName {get;set;}
+
+    public void OnGet()
+    {
+        ViewData["Title"] = "Northwind";
+        DayName = DateTime.Now.ToString("dddd");
+    }
+}
+<div class="jumbotron">
+    <h1 class="display-3">Welcome in @ViewData["Title"]</h1>
+    <p class="lead">We deliver products to our customers.</p>
+    <hr>
+    <p>Today is @DayName! The client base includes restaurants, hotels and shops.</p>
+    <p>
+        <a class="btn btn-primary" href="/Suppliers">
+            Find out more about our suppliers
+        </a>
+    </p>
+</div>
+ 
