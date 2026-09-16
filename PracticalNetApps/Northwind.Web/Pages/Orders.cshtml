@@ -1,0 +1,13 @@
+@page
+@using EntityModels;
+@inject NorthwindContext _db
+@{
+    string title = "Orders";
+    ViewData["Title"] = $"Northwind - {title}";
+}
+<div class="row">
+    <h1 class="display-2">@title</h1>
+    <p>
+        Northwind db has @_db.Orders.Count() orders.
+    </p>
+</div>
