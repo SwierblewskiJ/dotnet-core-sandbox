@@ -1,13 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="EFCore/**/*.cs;Northwind.Models/**/*.cs" />
+
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.12" />
 
     <PackageReference Version="10.0.12 " Include="Microsoft.EntityFrameworkCore.Design">
@@ -15,7 +17,7 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     
-    <ProjectReference Include="../Northwind.Models/Northwind.Models.csproj" />
+    <ProjectReference Include="Northwind.Models/Northwind.Models.csproj" />
   </ItemGroup>
 
 </Project>
