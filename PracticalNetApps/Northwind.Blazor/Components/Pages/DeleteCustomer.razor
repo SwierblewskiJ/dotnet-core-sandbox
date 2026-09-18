@@ -1,0 +1,52 @@
+@page "/deletecustomer/{CustomerId}"
+@inject INorthwindService Service
+@inject NavigationManager Navigation
+
+<h3>Delete customer</h3>
+
+<div class="alert alert-danger">Danger! You cannot return this action! </div>
+
+@if (customer is not null)
+{
+    <dl>
+        <dt>Customer Id</dt>
+        <dd>@customer.CustomerId</dd>
+        <dt>Company Name</dt>
+        <dd>@customer.CompanyName</dd>
+        <dt>Address</dt>
+        <dd>@customer.Address</dd>
+        <dt>Country</dt>
+        <dd>@customer.Country</dd>
+    </dl>
+
+    <button type="button" class="btn btn-danger" @onclick="Delete">Delete customer</button>
+}
+else
+{
+    <p>Customer not found.</p>
+}
+
+@code {
+    
+    [Parameter]
+    public string CustomerId { get; set; } = string.Empty;
+
+    private Customer? customer = new();
+
+    protected override async Task OnParametersSetAsync()
+    {
+        customer = await Service.GetCustomerAsync(CustomerId);
+    }
+
+    private async Task Delete()
+    {
+        if (customer is not null)
+        {
+            await Service.deleteCustomerAsync(CustomerId);
+        }
+
+        Navigation.NavigateTo("/customers");
+    }
+}
+
+@rendermode RenderMode.InteractiveServer

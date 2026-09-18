@@ -1,0 +1,18 @@
+@page "/createcustomer"
+@inject INorthwindService service
+@inject NavigationManager navigation
+
+<h3>Create customer</h3>
+<CustomerDetails ButtonText="Create Client" Customer="@customer" OnValidSubmit="@Create"/>
+
+@code{
+    private Customer customer = new();
+
+    private async Task Create()
+    {
+        await service.CreateClientAsync(customer);
+        navigation.NavigateTo("/customers");
+    }
+}
+
+@rendermode RenderMode.InteractiveServer

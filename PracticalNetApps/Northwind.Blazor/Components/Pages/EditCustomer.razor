@@ -1,0 +1,28 @@
+@page "/editcustomer/{customerid}"
+@inject INorthwindService service
+@inject NavigationManager navigation
+
+<h3>Edit customer</h3>
+<CustomerDetails ButtonText="Update" Customer="@customer" OnValidSubmit="@Update"/>
+
+@code{
+    [Parameter]
+    public string CustomerId {get; set;} = null!;
+
+    private Customer? customer = new();
+
+    protected async override Task OnParametersSetAsync()
+    {
+        customer = await service.GetCustomerAsync(CustomerId);
+    }
+
+    private async Task Update()
+    {
+        if(customer is not null)
+        {
+            await service.UpdateClientAsync(customer);
+        }
+        navigation.NavigateTo("/customers");
+    }
+}
+@rendermode @(new InteractiveServerRenderMode(prerender: false))

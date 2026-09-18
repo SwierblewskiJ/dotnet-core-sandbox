@@ -7,4 +7,10 @@
     <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../Northwind.DataContext.Sqlite/Northwind.DataContext.Sqlite.csproj"/>
+    <ProjectReference Include="../Northwind.Blazor.Services/Northwind.Blazor.Services.csproj"/>
+    <Using Include="EntityModels" />
+  </ItemGroup>
+
 </Project>
