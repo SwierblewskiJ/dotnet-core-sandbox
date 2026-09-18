@@ -14,9 +14,13 @@ namespace EntityModels;
 public partial class Customer
 {
     [Key]
+    [Required]
+    [StringLength(5, MinimumLength = 5)]
     [Column(TypeName = "nchar (5)")]
     public string CustomerId { get; set; } = null!;
 
+    [Required]
+    [StringLength(40)]
     [Column(TypeName = "nvarchar (40)")]
     public string CompanyName { get; set; } = null!;
 
