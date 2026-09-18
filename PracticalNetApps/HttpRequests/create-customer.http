@@ -1,0 +1,21 @@
+@base_address = https://localhost:5151/api/customers
+
+### 
+POST {{base_address}}
+Content-Type: application/json
+
+{
+    "CustomerId": "jan01",
+    "CompanyName": "asdCompany",
+    "ContactName": "Jan K",
+    "ContactTitle": "Mr",
+    "Address": "Łowiecka 00",
+    "City": "Warsaw",
+    "Region": "MA",
+    "PostalCode": "00-000",
+    "Country": "Poland",
+    "Phone":"(123) 555-1234",
+    "Fax":"123",
+    "Orders": []
+
+}

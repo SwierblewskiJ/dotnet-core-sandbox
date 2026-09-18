@@ -1,0 +1,21 @@
+@base_address = https://localhost:5151/api/customers
+
+GET {{base_address}}
+
+###
+
+GET https://localhost:5151/api/customers?country=Poland
+Accept: application/xml
+###
+
+GET https://localhost:5151/api/customers?country=Germany
+
+###
+GET https://localhost:5151/api/customers/alfki
+
+###
+GET https://localhost:5151/api/customers/jan01
+
+###
+
+DELETE https://localhost:5151/api/customers/JAN01
