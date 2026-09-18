@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
     <Using Include="System.Console" Static="true" /> 
   
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.7" />
